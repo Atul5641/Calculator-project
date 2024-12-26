@@ -1,0 +1,321 @@
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #2d2d2d;
+    --text-color: #ffffff;
+    --accent-color: #ff9800;
+    --border-color: #3d3d3d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.tab-btn.active {
+    opacity: 1;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.section {
+    display: block;
+}
+
+.section.hidden {
+    display: none;
+}
+
+/* Calculator Styles */
+.calculator {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.calculator-display {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calc-btn {
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.calc-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Existing Converter Styles */
+.converter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.converter-item {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.converter-item:hover {
+    transform: scale(1.05);
+}
+
+.converter-item .material-icons {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.converter-item p {
+    font-size: 14px;
+}
+
+.converter-panel {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.converter-panel.hidden {
+    display: none;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.converter-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.converter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input, select {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Date Calculator Specific Styles */
+.date-calculator {
+    padding: 20px;
+}
+
+.date-calculator .input-group {
+    margin-bottom: 20px;
+}
+
+.date-calculator label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--accent-color);
+    font-size: 16px;
+}
+
+.date-calculator input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.date-difference {
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.date-difference h3 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.difference-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.difference-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.difference-item span {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.difference-item label {
+    color: #888;
+    font-size: 14px;
+}
+
+.date-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-item label {
+    color: var(--accent-color);
+}
+
+.summary-item span {
+    color: var(--text-color);
+}
+
+/* History Section Styles */
+#historySection {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#historySection h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#historyList li {
+    padding: 8px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#clearHistoryBtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+

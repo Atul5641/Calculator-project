@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="calculator">Calculator</button>
+            <button class="tab-btn" data-tab="converter">Converter</button>
+            <button class="tab-btn" data-tab="history">History</button>
+        </nav>
+        
+        <div id="calculatorSection" class="section">
+            <div class="calculator">
+                <div class="calculator-display">
+                    <input type="text" id="display" readonly>
+                </div>
+                <div class="calculator-buttons">
+                    <!-- Example Buttons -->
+                    <button class="calc-btn" data-action="clear">AC</button>
+                    <button class="calc-btn" data-action="delete">⌫</button>
+                    <button class="calc-btn" data-action="operator">%</button>
+                    <button class="calc-btn" data-action="operator">/</button>
+                    <button class="calc-btn" data-digit="7">7</button>
+                    <button class="calc-btn" data-digit="8">8</button>
+                    <button class="calc-btn" data-digit="9">9</button>
+                    <button class="calc-btn" data-action="operator">*</button>
+                    <button class="calc-btn" data-digit="4">4</button>
+                    <button class="calc-btn" data-digit="5">5</button>
+                    <button class="calc-btn" data-digit="6">6</button>
+                    <button class="calc-btn" data-action="operator">-</button>
+                    <button class="calc-btn" data-digit="1">1</button>
+                    <button class="calc-btn" data-digit="2">2</button>
+                    <button class="calc-btn" data-digit="3">3</button>
+                    <button class="calc-btn" data-action="operator">+</button>
+                    <button class="calc-btn" data-digit="0">0</button>
+                    <button class="calc-btn" data-digit>.</button>
+                    <button class="calc-btn" data-action="equals">=</button>
+                    <!-- Add more buttons as needed -->
+                </div>   
+            </div>
+        </div>
+
+        <div id="converterSection" class="section hidden">
+            <div class="converter-grid">
+                <!-- Existing converter grid items -->
+                <div class="converter-item" data-type="currency">
+                    <span class="material-icons">currency_exchange</span>
+                    <p>Currency</p>
+                </div>
+                <div class="converter-item" data-type="length">
+                    <span class="material-icons">straighten</span>
+                    <p>Length</p>
+                </div>
+                <div class="converter-item" data-type="mass">
+                    <span class="material-icons">fitness_center</span>
+                    <p>Mass</p>
+                </div>
+                <div class="converter-item" data-type="area">
+                    <span class="material-icons">square_foot</span>
+                    <p>Area</p>
+                </div>
+                <div class="converter-item" data-type="time">
+                    <span class="material-icons">schedule</span>
+                    <p>Time</p>
+                </div>
+                <div class="converter-item" data-type="finance">
+                    <span class="material-icons">payments</span>
+                    <p>Finance</p>
+                </div>
+                <div class="converter-item" data-type="data">
+                    <span class="material-icons">storage</span>
+                    <p>Data</p>
+                </div>
+                <div class="converter-item" data-type="date">
+                    <span class="material-icons">calendar_today</span>
+                    <p>Date</p>
+                </div>
+                <div class="converter-item" data-type="discount">
+                    <span class="material-icons">local_offer</span>
+                    <p>Discount</p>
+                </div>
+                <div class="converter-item" data-type="volume">
+                    <span class="material-icons">view_in_ar</span>
+                    <p>Volume</p>
+                </div>
+                <div class="converter-item" data-type="numeral">
+                    <span class="material-icons">123</span>
+                    <p>Numeral system</p>
+                </div>
+                <div class="converter-item" data-type="speed">
+                    <span class="material-icons">speed</span>
+                    <p>Speed</p>
+                </div>
+                <div class="converter-item" data-type="temperature">
+                    <span class="material-icons">thermostat</span>
+                    <p>Temperature</p>
+                </div>
+                <div class="converter-item" data-type="bmi">
+                    <span class="material-icons">monitor_weight</span>
+                    <p>BMI</p>
+                </div>
+                <div class="converter-item" data-type="gst">
+                    <span class="material-icons">receipt</span>
+                    <p>GST</p>
+                </div>
+            </div>
+
+            <div class="converter-panel hidden">
+                <button class="back-btn">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <h2 class="converter-title">Converter</h2>
+                <div class="converter-form">
+                    <div class="input-group">
+                        <input type="number" id="fromValue" placeholder="Enter value">
+                        <select id="fromUnit"></select>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="toValue" readonly>
+                        <select id="toUnit"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historySection" class="section hidden">
+            <h2>Calculation History</h2>
+            <ul id="historyList"></ul>
+            <button id="clearHistoryBtn">Clear History</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
